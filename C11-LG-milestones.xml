@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="milestones.xsl"?>
+
+<root>
+<!-- *************************
+  SIGNATURE is made up of 'id' + 'major-version' only
+  (also too laze to bother with xml schema)
+-->
+<signature id="simple.milestones.template101@justforfun.com.au" major-version="1.0" minor-version="0.0"/>
+
+<!-- *************************
+  THEME (for developer)
+  Overrides predefined CSS
+  Example: <css selector="body", value="{'background-color':'orange', 'font-size': '150%'}"/>
+)
+-->
+<theme>
+  <css selector="body" value="{'background-color':'#ccff00'}"/>
+</theme>
+
+<!-- *************************
+  HEADER (Renders html syntax)
+-->
+<header title="C11 - LG Critical Deliverable Milestones">
+<p>
+  A one-stop-shop that highlights critical deliverable elements from start to finish (including post-go-live)
+</p>
+  <ol type="1">
+    <li>Project manager (owner of this document) uses this to track progress</li>
+    <li>An individual or team uses this to find out their roles and expected deliveries</li>
+    <li>Keeps the ball rolling by having pragmatic hints and instructions for the individual or the team to complete their milestones<br/>
+        <span style='font-size:0.8em; font-weight:bold;'>* Please let the project manager know if it is NOT working for you!</span></li>
+    <li>Dependencies - Milestones downstream depend on the work of all upstream milestones</li>
+  </ol>
+</header>
+
+<!-- *************************
+  FOOTER (Renders HTML syntax)
+-->
+<footer>
+<p>
+  Powered by the grace of God. Supported by a vast number of brothers and sisters in CABC.
+</p>
+</footer>
+
+<!-- ********************************************************************************************
+  MILESTONES (Renders user milestones)
+  
+  owner = "Whoever delivers this"
+  title = "the milestone title"
+  deadline = "12/02/2019"
+  status = "done | warn | alarm | star | look | qmark | whateverYourType"
+  keyword = "Represents a SUMMARY of the description"
+  desc = "some description" | "&lt;b&gt; This is bold &lt;/b&gt;"
+-->
+<milestones section_head="Milestones">
+
+  <!-- ***************************************************************************************** -->
+  <!-- A mandatory hidden template to simply coding (by cloning) when user adds new records      -->
+  <!-- This template M U S T contain all the user definable elements and attributes              -->
+  <!-- See milestone.js - look for MilestoneHtmlTemplate.xxx                                     -->
+  <!-- D O   N O T   M O D I F Y THE IMMEDIATE BELOW MILESTONE ELEMENT UNLESS YOU ARE A DEVELOPER-->
+  <!-- ***************************************************************************************** -->
+  <milestone hide="true" deadline="31/12/9999" category="" status="" owner="" title="User shall not see this. Must have all elements and attributes. Used by javascript as template at runtime.">
+    <deliverable status="" keyword="" desc="" >
+      <item_desc status="" keyword="" desc=""/>
+    </deliverable>
+    <note title="">
+      <item_desc status="" keyword="" desc=""/>
+    </note>
+  </milestone>
+
+  <!-- ************************** -->
+  <!-- User data starts from here -->
+  <!-- ************************** -->
+  <milestone deadline="01/01/1900" category="Demo" status="done" owner="Developer" title="For demonstration only (1 or 2)"/>
+  <milestone deadline="01/01/1900" category="Demo" status="done" owner="Developer" title="For demonstration only (2 of 2)">
+    <deliverable status="" keyword="MULTIPLE_ITEMS" desc="This deliverable has multiple items" >
+      <item_desc status="" keyword="ITEM_1" desc="1st item"/>
+      <item_desc status="" keyword="ITEM_2" desc="2nd item" />
+    </deliverable>
+    <deliverable status="" keyword="NO_ITEMS" desc="This deliverable has no items" />
+    <note title="This note has multiple items">
+      <item_desc status="done" keyword="My note 1" desc="has status = 'done' symbol"/>
+      <item_desc status="warn" keyword="My note 2" desc="has status = 'warn' symbol"/>
+    </note>
+    <note title="This note has no items" />
+  </milestone>
+  
+  <milestone deadline="01/03/2018" category="Define" status="done" owner="All Pastors" title="Grasped good clarity on Vision, Core Values and LG">
+    <deliverable status="" keyword="THE PICTURE" desc="from the intentions to the scaffolding to the future CABC" >
+      <item_desc status="" keyword="THE SPIRIT BEHINE" desc="on the whole, the Vision, individual Core Values and LG."/>
+      <item_desc status="" keyword="HOW THEY HANG TOGETHER" desc="how the Vision, Core Values and LG hang together (as oppose to isolated truths). This conveys meanings and value to the changes." />
+      <item_desc status="" keyword="TANGIBLES" desc="what it looks like in CABC" />
+    </deliverable>
+  </milestone>
+
+  <milestone deadline="15/02/2019" category="Roles" status="look" owner="Council" title="Identified Roles and Responsibilities">
+    <deliverable status="" keyword="LG Project Manager (cong level)" desc="One project manager per cong. Owner and maintenance of this document" >
+      <item_desc status="" keyword="NOTE" desc="LG Owner oversees 'what LG looks like' whereas the Project Manager oversees delivery schedule" />
+      <item_desc status="" keyword="MAIN PURPOSE" desc="To keep the ball rolling by generating a full picture that contains all critical milestones (or critical paths), 
+                                    their dependencies and then fill in pragmatic hints and directions for the individual or the team to complete the milestone." />
+      <item_desc status="" keyword="DO NOT" desc="Please refrain from adding extra that does not help to keep the ball rolling. Critical stuffs and solid directions only please."/>
+      <item_desc status="" keyword="PLANNING" desc="Both LG OWNER and Project Manager have equal say. 
+                                                    However, LG OWNER to create this critical milestones project plan first. 
+                                                    The Project Manager then add or amend. 
+                                                    Then both LG OWNER and Project Manager come together to finalise this plan." />
+      <item_desc status="" keyword="DELIVERY" desc="Tracks, chase actions to keep project moving to deliver at milestone dates" />
+      <item_desc status="" keyword="MANAGE" desc="Aware of and manage stucked situations (raise possible missing links/info, help explore decision options)" />
+      <item_desc status="" keyword="LIAISON" desc="To seek common understanding (this is necessary before b/s feels ok to move on - related to 'delivery' and 'manage')" />
+      <item_desc status="" keyword="CHAIRING" desc="LG meetings" />
+      <item_desc status="" keyword="ALARM" desc="Raise show stopper alarms" />
+    </deliverable>
+    <deliverable status="" keyword="Senior Pastor" desc="Chief consultant and approver. Knowledge rich in Revitalisation and connected to the Pastoral Team" >
+      <item_desc status="" keyword="KNOWLEDGE BASE" desc="Assists LG Owner to align existing ministries and implement LG" />
+      <item_desc status="" keyword="OVERSEER" desc="of all things Revitalisation (including LG) to arrive at the desired 'what it looks like' in the implementation"/>
+      <item_desc status="" keyword="DECISION MAKER" desc="to help LG Owners solve POD, alignment, transition, implementation issues in order to keep things moving" />
+    </deliverable>
+    <deliverable status="look" keyword="Cong Lead Pastor" desc="TBD - Pastoral Team and Council to discuss this role in LG" >
+    </deliverable>
+    <deliverable status="" keyword="LG Pastors Team (cross congs)" desc="One pastor from each cong. Creator of everything LG." >
+      <item_desc status="" keyword="KNOWLEDGE BASE" desc="LG consultant team. Knowledge rich in LG and connected to the Pastoral Team" />
+      <item_desc status="" keyword="OVERSEER" desc="of all things LG in all congs to arrive at the desired 'what it looks like' in the implementation"/>
+      <item_desc status="" keyword="DECISION MAKER" desc="to help cong LG Owners solve POD, alignment, transition, implementation issues in order to keep things moving" />
+    </deliverable>
+    <deliverable status="" keyword="LG Owner (cong level)" desc="One per cong. A pastor of the cong. Also a member of the LG Pastors Team." >
+      <item_desc status="" keyword="NOTE" desc="LG Owner oversees 'what LG looks like' whereas the Project Manager oversees delivery schedule" />
+      <item_desc status="" keyword="LG KNOWLEDGE BASE" desc="C11 LG consultant. Knowledge rich in the C11 settings, LG and connected to the Pastoral Team" />
+      <item_desc status="" keyword="LG OVERSEER" desc="by monitoring, guide, decide, seek out and correct all things C11 LG so as to arrive at the desired 'what LG looks like' in the implementation"/>
+      <item_desc status="" keyword="LG DECISION MAKER" desc="to help Project Manager solve POD, alignment, transition, implementation issues in order to keep things moving" />
+    </deliverable>
+    <deliverable status="" keyword="PROMOTION Team (cross congs)" desc="One for all the congs" >
+      <item_desc status="" keyword="TBD" desc="TBD" />
+    </deliverable>
+    <deliverable status="" keyword="LG Team (implementation phase)" desc="One per cong" >
+      <item_desc status="" keyword="COMMITTEE" desc="LG Owner, LG Project Manager, recruited leaders" />
+      <item_desc status="" keyword="" desc="See LG implementation and execution plan doc" />
+    </deliverable>
+    <deliverable status="" keyword="LG Zone Director" desc="One per cong" >
+      <item_desc status="" keyword="" desc="See LG implementation and execution plan doc" />
+    </deliverable>
+    <deliverable status="" keyword="LG Zone Leaders" desc="Per cong" >
+      <item_desc status="" keyword="" desc="See LG implementation and execution plan doc" />
+      <item_desc status="" keyword="" desc="Zone leader is also member of a life group" />
+    </deliverable>
+    <deliverable status="" keyword="LG Group leaders" desc="Per cong" >
+      <item_desc status="" keyword="" desc="See LG implementation and execution plan doc" />
+    </deliverable>
+    <deliverable status="" keyword="LG Group members" desc="Per cong" >
+      <item_desc status="" keyword="" desc="See LG implementation and execution plan doc" />
+    </deliverable>
+    <deliverable status="" keyword="LG Op Support (post implementation phase)" desc="One per cong" >
+      <item_desc status="" keyword="TBD" desc="" />
+    </deliverable>
+  </milestone>
+
+  <milestone deadline="01/11/2018" category="Define" status="qmark" owner="LG Pastors Team" title="Completed LG document and execution plan">
+    <deliverable status="qmark" keyword="APPROVED" desc="by the Senior Pastor" >
+    </deliverable>
+    <deliverable status="qmark" keyword="READY TO PREPARE IMPLEMENTATION" desc="Enough material to start preparing for implementation" >
+      <item_desc status="look" keyword="HIGHLIGHTS" desc="connection to Vision, Core Values and the overall Revitalisation" />
+      <item_desc status="look" keyword="TELLS" desc="Why we do, What we do and How to do it" />
+      <item_desc status="look" keyword="OPERATION MANUAL and GUIDE" desc="Source of truth in LG implementation" />
+    </deliverable>
+  </milestone>
+
+  <milestone deadline="01/10/2018" category="Recruit" status="TBD" owner="LG Pastors Team" title="Recruited LG Owner">
+    <deliverable status="" keyword="" desc="See Identified Roles and Responsibilities" />
+  </milestone>
+
+  <milestone deadline="01/03/2018" category="Recruit" status="TBD" owner="Senior Pastor" title="Recruited LG Pastors Team">
+    <deliverable status="" keyword="CHOSEN" desc="by the Senior Pastor" />
+    <deliverable status="" keyword="" desc="See Identified Roles and Responsibilities" />
+  </milestone>
+
+  <milestone deadline="06/01/2019" category="Comm" status="TBD" owner="LG Owner" title="Completed Cast to leaders. Keep Dripping">
+    <deliverable status="" keyword="MAKE MEMORABLE" desc="Vision, Core Values, LG" />
+    <deliverable status="" keyword="CONNECTIONS BETWEEN Vision, Core Values, LG" desc="so leaders can see values" />
+  </milestone>
+
+  <milestone deadline="06/01/2019" category="Recruit" status="TBD" owner="LG Owner" title="Recruited LG Team (C11)">
+    <deliverable status="" keyword="TEAM DURATION" desc="TBD" />
+    <deliverable status="" keyword="LG Team role" desc="General" >
+      <item_desc status="" keyword="" desc="Assists LG Owner to align existing ministries to LG (includes implementation and transition planning)" />
+      <item_desc status="" keyword="" desc="Liaise with existing ministry leaders" />
+      <item_desc status="" keyword="" desc="All LG recruitments (except C11 LG Director who is appointed by the Senior Pastor)" />
+      <item_desc status="" keyword="" desc="Assists LG Owner to run forums" />
+      <item_desc status="" keyword="" desc="Post implementation monitoring, assess and recommendation" />
+    </deliverable>
+  </milestone>
+
+  <milestone deadline="03/02/2019" category="Align" status="TBD" owner="LG Team" title="LG Team's understanding of Vision, Core Values and LG (POD)">
+    <deliverable status="" keyword="INFO FEED" desc="LG Owner to be proactive and intentionally lead the LG Team otherwise they cannot help you" />
+    <deliverable status="" keyword="TEAM GOT IT" desc="LG Team has good understanding of following" >
+      <item_desc status="" keyword="" desc="Has grasped a good perspective of how the Vision, Core Values and LG hang together (not remembering terms)" />
+      <item_desc status="" keyword="" desc="Has grasped the spirit behind each one" />
+    </deliverable>
+    <deliverable status="" keyword="TEAM KNOWS HOW LG WORKS" desc="LG Team have mentally walked through following LG operations (common-to-all: training, personal growth, self-care)" >
+      <item_desc status="" keyword="GROUP MEETING" desc="frequency and typical meeting format and duration, common understanding on demographics make up" />
+      <item_desc status="" keyword="ZONE DIRECTOR" desc="frequency and support to zone leaders, communication to group leaders/members, sermon-based bible studies (material sample)" />
+      <item_desc status="" keyword="ZONE LEADER" desc="frequency and support from zone director, support to group leaders, sermon-based bible studies (any pre-studies?)" />
+      <item_desc status="" keyword="GROUP LEADER" desc="frequency and support from zone leader, typical group meeting, sermon-based bible studies (any pre-studies?)" />
+      <item_desc status="" keyword="SERMON BASED BIBLE STUDIES" desc="The key message, questions and answers, any pre-studies" />
+      <item_desc status="" keyword="LG MULTIPLICATION" desc="when, who initiates, how" />
+      <item_desc status="" keyword="TRAINING" desc="See milestones on Training" />
+      <item_desc status="" keyword="LEADERS SERVICE TERM" desc="How long is a term. Any sabbatical?" />
+      <item_desc status="" keyword="INTER GROUP ACTIVITIES" desc="Will there be any? Who will organise. How often. What activities." />
+      <item_desc status="" keyword="OTHERS" desc="Please specify" />
+    </deliverable>
+  </milestone>
+
+  <milestone deadline="03/02/2019" category="Align" status="TBD" owner="LG Owner" title="Determined which ministries are to align to LG">
+    <deliverable status="" keyword="WHICH MINISTRIES TO GO TO LG" desc="Using Purpose, Operation and target Demographics of existing ministries" >
+      <item_desc status="" keyword="INITIAL DECISION" desc="using gaps on POD (a quick analysis)" />
+      <item_desc status="" keyword="FINAL DECISION" desc="using 'Guide to align two ministries ppt' (more thoughts leading to preparation to guide LG Team)" />
+    </deliverable>
+  </milestone>
+
+  <milestone deadline="03/03/2019" category="Align" status="TBD" owner="LG Team" title="Formulated gap alignment and transition plans for each ministries">
+    <deliverable status="" keyword="LG OWNER" desc="to let Team know all ministries to be aligned to LG" />
+    <deliverable status="" keyword="LG Team" desc="to decide who in the Team deals with which existing ministries" />
+    <deliverable status="" keyword="HAVE SOME IDEAS FIRST" desc="LG Team'S initial gaps hunt" >
+      <item_desc status="" keyword="LG OWNER TO BRIEF" desc="LG Owner give initial ideas about his or her pick" />
+      <item_desc status="" keyword="PICK THESE" desc="Brainstorm potential gaps using POD that seems to be wide" />
+      <item_desc status="" keyword="GIVE &#38; TAKE" desc="Closer look at the picked potential gaps (on give and take grounds) to get some ideas of what that may mean (before making contact)" />
+    </deliverable>
+    <deliverable status="" keyword="MAKE CONTACT(s)" desc="Formal\Informal Q&#38;A forum(s) with existing ministry leaders about possible changes" >
+      <item_desc status="" keyword="NOTE" desc="This is where LG Owner's cast and drip in previous months will have it's helpful effect" />
+      <item_desc status="" keyword="COLLECT INFO" desc="Conversation to discover (1) If brainstormed potential gaps are real concerns (2) Discover other gaps from discussion (3) Discover concerns" />
+      <item_desc status="" keyword="KEEP BALL ROLLING" desc="Always define next steps for everyone before meeting ends" />
+    </deliverable>
+    <deliverable status="" keyword="FOLLOW UP AFTER EACH CONTACT(s)" desc="they are also part of your team in a way" >
+      <item_desc status="" keyword="WE ARE WORKING ON IT" desc="Keep them informed and build bridges towards a good working relationship" />
+      <item_desc status="" keyword="SMALL TALKS" desc="You'll be surprised how much small talks here and there can help you with ideas and to see a clearer picture or a missing piece" />
+    </deliverable>
+    <deliverable status="" keyword="FIRST GAP PLAN" desc="With common understanding of identified gaps in previous conversations" >
+      <item_desc status="" keyword="GIVE &#38; TAKE IN THE CHANGES" desc="Common understanding and any special undertakings (e.g. keeping Sunday School)" />
+      <item_desc status="" keyword="100% MIGRATION ONES" desc="List ministries that will be fully migrated (no transitions) on LG Go-Live day. And a plan to do this." />
+      <item_desc status="" keyword="TRANSITION PLAN (non-100% migrate)" desc="What do existing leaders and members do and what plans will be in place for these ministries to gradually migrate to LG after Go-Live and estimated how long?" />
+    </deliverable>
+    <deliverable status="" keyword="FINAL GAP PLAN" desc="" >
+      <item_desc status="" keyword="APPROVAL" desc="by the Senior Pastor and the LG Owner" />
+      <item_desc status="" keyword="CONFIRMED AND BRIEFED" desc="with existing ministry leaders so that they are also on-board." />
+      <item_desc status="" keyword="GIVE &#38; TAKE IN THE CHANGES" desc="As above" />
+      <item_desc status="" keyword="100% MIGRATION" desc="As above" />
+      <item_desc status="" keyword="TRANSITION PLAN (non-100% migrate)" desc="As above" />
+    </deliverable>
+  </milestone>
+
+  <milestone deadline="03/03/2019" category="Comm" status="TBD" owner="LG Owner" title="Completed Cast to Cong. Keep Dripping">
+    <deliverable status="" keyword="MAKE MEMORABLE" desc="Vision, Core Values, LG" />
+    <deliverable status="" keyword="CONNECTIONS BETWEEN Vision, Core Values, LG" desc="so everyone can see values" />
+  </milestone>
+
+  <milestone deadline="03/03/2019" category="Recruit" status="TBD" owner="Senior Pastor" title="Completed the LG Zone Director recruitment">
+    <deliverable status="" keyword="CRITERIA" desc="See LG implementation and execution plan doc" />
+    <deliverable status="" keyword="LEADERS BRIEFED" desc="">
+      <item_desc status="" keyword="SERVICE NATURE" desc="" />
+      <item_desc status="" keyword="SERVICE TERM" desc="" />
+      <item_desc status="" keyword="EXPECTATIONS" desc="" />
+      <item_desc status="" keyword="SUPPORT SYSTEM" desc="" />
+      <item_desc status="" keyword="TRAINING" desc="" />
+    </deliverable>
+    <deliverable status="" keyword="LEADER'S PROFILE RECORDED" desc="" >
+      <item_desc status="" keyword="NAME" desc="" />
+      <item_desc status="" keyword="MEMBER SINCE" desc="" />
+      <item_desc status="" keyword="SERVICES IN CABC" desc="" />
+      <item_desc status="" keyword="OTHER EXPERIENCE" desc="" />
+      <item_desc status="" keyword="PROFILE CHECK" desc="for due diligence" />
+    </deliverable>
+  </milestone>
+  
+  <milestone deadline="03/03/2019" category="Recruit" status="TBD" owner="LG Team" title="Completed LG Zone Leaders recruitment">
+    <deliverable status="" keyword="CRITERIA" desc="See LG implementation and execution plan doc" />
+    <deliverable status="" keyword="LEADERS BRIEFED" desc="">
+      <item_desc status="" keyword="SERVICE NATURE" desc="" />
+      <item_desc status="" keyword="SERVICE TERM" desc="" />
+      <item_desc status="" keyword="EXPECTATIONS" desc="" />
+      <item_desc status="" keyword="SUPPORT SYSTEM" desc="" />
+      <item_desc status="" keyword="TRAINING" desc="" />
+    </deliverable>
+    <deliverable status="" keyword="LEADERS' PROFILE RECORDED" desc="" >
+      <item_desc status="" keyword="NAME" desc="" />
+      <item_desc status="" keyword="MEMBER SINCE" desc="" />
+      <item_desc status="" keyword="SERVICES IN CABC" desc="" />
+      <item_desc status="" keyword="OTHER EXPERIENCE" desc="" />
+      <item_desc status="" keyword="PROFILE CHECK" desc="for due diligence" />
+    </deliverable>
+  </milestone>
+  
+  <milestone deadline="03/03/2019" category="Recruit" status="TBD" owner="LG Team" title="Completed LG Group Leaders recruitment">
+    <deliverable status="" keyword="CRITERIA" desc="See LG implementation and execution plan doc" />
+    <deliverable status="" keyword="LEADERS BRIEFED" desc="">
+      <item_desc status="" keyword="SERVICE NATURE" desc="" />
+      <item_desc status="" keyword="SERVICE TERM" desc="" />
+      <item_desc status="" keyword="EXPECTATIONS" desc="" />
+      <item_desc status="" keyword="SUPPORT SYSTEM" desc="" />
+      <item_desc status="" keyword="TRAINING" desc="" />
+    </deliverable>
+    <deliverable status="" keyword="LEADERS PROFILE RECORDED" desc="" >
+      <item_desc status="" keyword="NAME" desc="" />
+      <item_desc status="" keyword="MEMBER SINCE" desc="" />
+      <item_desc status="" keyword="SERVICES IN CABC" desc="" />
+      <item_desc status="" keyword="OTHER EXPERIENCE" desc="" />
+      <item_desc status="" keyword="PROFILE CHECK" desc="for due diligence" />
+    </deliverable>
+  </milestone>
+
+  <milestone deadline="07/04/2019" category="Training" status="TBD" owner="LG Owner" title="Completed Group Leaders Trainings (including co-leaders)">
+    <deliverable status="" keyword="TRAINING (ADMIN)" desc="" >
+      <item_desc status="" keyword="EXPECTATIONS" desc="of the leader and also what the leader expects from Zone leaders, the Zone director and cong Pastors" />
+      <item_desc status="" keyword="LEADERSHIP 101" desc="" />
+      <item_desc status="" keyword="GROUP LEADER 101" desc="including how to manifest Vision, Core Values into group life" />
+      <item_desc status="" keyword="LEVEL OF CARE FOR GROUP MEMBERS" desc="" />
+      <item_desc status="" keyword="SUPPORT SYSTEM" desc="for the leader" />
+      <item_desc status="" keyword="CO-LEAD SUPPORT" desc="" />
+      <item_desc status="" keyword="OWN GROWTH" desc="for the leader" />
+      <item_desc status="" keyword="SELF CARE" desc="" />
+      <item_desc status="" keyword="LIMITATIONS" desc="" />
+      <item_desc status="" keyword="CONFIDENIALITY" desc="" />
+      <item_desc status="" keyword="REGULAR TRAINING" desc="" />
+    </deliverable>
+    <deliverable status="" keyword="TRAINING (GROUP LIFE SKILLS)" desc="" >
+      <item_desc status="" keyword="FROM STARTING A NEW GROUP TO A GRACEFUL FINISH" desc="" />
+      <item_desc status="" keyword="HANDLING SEASONS OF GROUP LIFE" desc="honeymoon, honeymoon over, teething(trying boundaries), conflicts, reconciliation, found balance and personal space, parting" />
+      <item_desc status="" keyword="LEAD A BIBLE STUDY 101" desc="" />
+      <item_desc status="" keyword="CARING 101" desc="" />
+      <item_desc status="" keyword="HANDLING CONFLICTS 101" desc="" />
+      <item_desc status="" keyword="COUNSELLING 101" desc="" />
+      <item_desc status="" keyword="DEALING WITH LOSS &#38; GRIEF" desc="" />
+    </deliverable>
+    <deliverable status="" keyword="POST TRAINING Q&#38;A" desc="where to get answers after training sessions." />
+    <deliverable status="" keyword="TRAINING SCHEDULES" desc="" />
+  </milestone>
+
+  <milestone deadline="07/04/2019" category="Training" status="TBD" owner="LG Owner" title="Completed Zone Leaders Trainings">
+    <deliverable status="" keyword="TRAINING (ADMIN)" desc="" >
+      <item_desc status="" keyword="EXPECTATIONS" desc="of the leader and also what the leader expects from Zone director and cong Pastors. Also everything a typical Group Leader should know and may encounter." />
+      <item_desc status="" keyword="LEADERSHIP 101" desc="" />
+      <item_desc status="" keyword="ZONE LEADER 101" desc="including how to help group leaders to manifest Vision, Core Values into group life" />
+      <item_desc status="" keyword="MEETING WITH GROUP LEADERS" desc="TBD" />
+      <item_desc status="" keyword="LEVEL OF CARE AND SUPPORT TO GROUP LEADERS" desc="" />
+      <item_desc status="" keyword="SUPPORT SYSTEM" desc="for the leader" />
+      <item_desc status="" keyword="OWN GROWTH" desc="for the leader" />
+      <item_desc status="" keyword="SELF CARE" desc="" />
+      <item_desc status="" keyword="LIMITATIONS" desc="" />
+      <item_desc status="" keyword="CONFIDENIALITY" desc="" />
+      <item_desc status="" keyword="REGULAR TRAINING" desc="" />
+    </deliverable>
+    <deliverable status="" keyword="POST TRAINING Q&#38;A" desc="where to get answers after training sessions." />
+    <deliverable status="" keyword="TRAINING SCHEDULES" desc="" />
+  </milestone>
+  
+  <milestone deadline="07/04/2019" category="Training" status="TBD" owner="LG Owner" title="Completed the Zone Director (a Pastor) Trainings">
+    <deliverable status="" keyword="CONTENT" desc="" >
+      <item_desc status="" keyword="EXPECTATIONS" desc="of the Pastor and also what the Pastor expects from other Pastors and the Senior Pastor. Also everything a typical Zone and Group Leader should know and may encounter." />
+      <item_desc status="" keyword="LEADERSHIP 101" desc="" />
+      <item_desc status="" keyword="ZONE DIRECTOR 101" desc="including how to help group leaders to manifest Vision, Core Values into group life" />
+      <item_desc status="" keyword="YOU MAY BE ASKED" desc="to solve issue faced by zone and group leaders" />
+      <item_desc status="" keyword="LEVEL OF CARE AND SUPPORT TO ZONE AND GROUP LEADERS" desc="" />
+      <item_desc status="" keyword="SUPPORT SYSTEM" desc="for the leader" />
+      <item_desc status="" keyword="OWN GROWTH" desc="for the leader" />
+      <item_desc status="" keyword="SELF CARE" desc="" />
+      <item_desc status="" keyword="LIMITATIONS" desc="" />
+      <item_desc status="" keyword="CONFIDENIALITY" desc="" />
+      <item_desc status="" keyword="REGULAR TRAINING" desc="" />
+    </deliverable>
+    <deliverable status="" keyword="POST TRAINING Q&#38;A" desc="where to get answers after training sessions." />
+    <deliverable status="" keyword="TRAINING SCHEDULES" desc="" />
+  </milestone>
+  
+  <milestone deadline="05/05/2019" category="Allocate" status="TBD" owner="LG Team" title="Completed Zone leaders to Zone director allocation">
+    <deliverable status="" keyword="NAMES AGAINST THE DIRECTOR" desc="" />
+  </milestone>
+
+  <milestone deadline="02/06/2019" category="Allocate" status="TBD" owner="LG Team" title="Completed Group leaders to Zone leaders allocation">
+    <deliverable status="" keyword="NAMES AGAINST ZONE LEADERS" desc="" />
+  </milestone>
+
+  <milestone deadline="05/05/2019" category="Allocate" status="TBD" owner="LG Team" title="Completed members to Group leaders allocation">
+    <deliverable status="" keyword="MEMBERS PROFILES" desc="" >
+      <item_desc status="" keyword="NAMES" desc="" />
+      <item_desc status="" keyword="DEMOGRAPHICS" desc="" />
+      <item_desc status="" keyword="BRINGS CHILDREN" desc="" />
+      <item_desc status="" keyword="CHURCH LIFE IN CABC" desc="" />
+    </deliverable>
+    <deliverable status="" keyword="DECISIONS" desc="" >
+      <item_desc status="" keyword="FIRST MEETING DATE" desc="" />
+      <item_desc status="" keyword="VENUE" desc="" />
+      <item_desc status="" keyword="DURATION" desc="" />
+      <item_desc status="" keyword="MEETING FREQUENCY" desc="" />
+      <item_desc status="" keyword="MEALS" desc="if any before or after the meeting" />
+      <item_desc status="" keyword="UP-FRONT" desc="including a welcome, intro plan, general agreements (e.g. confidentiality), purpose and expectations" />
+    </deliverable>
+  </milestone>
+
+  <milestone deadline="05/05/2019" category="Allocate" status="TBD" owner="LG Team" title="Completed plan for those un-allocated (if any)">
+    <deliverable status="" keyword="IDENTIFY" desc="so that no one is left out" />
+    <deliverable status="" keyword="PLAN" desc="[if any]" />
+  </milestone>
+
+  <milestone deadline="02/06/2019" category="Pre Go-Live" status="TBD" owner="LG Zone Director" title="Completed first meeting with Zone leaders">
+  </milestone>
+
+  <milestone deadline="02/06/2019" category="Pre Go-Live" status="TBD" owner="LG Zone Leaders" title="Completed first meeting with Group leaders">
+  </milestone>
+
+  <milestone deadline="02/06/2019" category="Pre Go-Live" status="TBD" owner="LG Group Leaders" title="Completed first meeting with Group members">
+  </milestone>
+
+  <milestone deadline="02/06/2019" category="Comm" status="TBD" owner="Promotion Team" title="Completed promotion">
+    <deliverable status="" keyword="BE AUTHENTIC AND REAL" desc="do not over promote (manage expectation ... we have not done this before!!!)" />
+  </milestone>
+
+  <milestone deadline="05/06/2019" category="Pre Go-Live" status="star" owner="Senior Pastor" title="Pre go-live briefing">
+    <deliverable status="" keyword="WHO TO ATTEND" desc="LG Team, Zone Directors, Zone leaders, Group leaders" />
+    <deliverable status="" keyword="NOTE" desc="This is to manage expectation with no on the day surprises" />
+    <deliverable status="" keyword="date" desc="This must be completed at least 1 month before Go-Live day" />
+    <deliverable status="" keyword="CONTENT" desc="A rundown on what to expect on Go-Live day" />
+    <deliverable status="" keyword="LAST CHANCE Q&#38;A" desc="to find out what else may be missing" />
+    <deliverable status="" keyword="OTHERS" desc="Please specify" />
+  </milestone>
+  
+  <milestone deadline="05/07/2019" category="Go-Live" status="star" owner="Senior Pastor" title="Day LG go-live">
+    <deliverable status="" keyword="BE AUTHENTIC AND REAL" desc="manage expectation ... we have not done this before!!!" />
+    <deliverable status="" keyword="LITTLE IS MORE" desc="Repeatedly present a simple memorable message to highlight the LG journey" />
+    <deliverable status="" keyword="CONNECTION INSPIRES" desc="Make connection between Vision, Core Values and LG so leaders can see values (the ah ha moment)" />
+  </milestone>
+
+  <milestone deadline="05/07/2019" category="Post Go-Live" status="TBD" owner="LG Team" title="Started LG post go-live (keep a look out)">
+    <deliverable status="" keyword="POST GO-LIVE FOLLOW UP" desc="Keeping an eye and an ear out" />
+  </milestone>
+
+  <milestone deadline="28/08/2019" category="Post Go-Live" status="TBD" owner="LG Team" title="Completed post go-live assessment">
+    <deliverable status="" keyword="OPERATION" desc="" />
+    <deliverable status="" keyword="SUPPORT" desc="" />
+    <deliverable status="" keyword="TRAINING" desc="" />
+    <deliverable status="" keyword="PASTORAL CARE" desc="" />
+    <deliverable status="" keyword="SERMON BASE BIBLE STUDIES" desc="" />
+    <deliverable status="" keyword="WHERE IT MATTERS" desc="is it on the right track to revitalise? Is focus kept?" >
+      <item_desc status="" keyword="NOTE" desc="It won't happen overnight but these outcome questions need to be asked" />
+      <item_desc status="" keyword="MAKING A DIFFERENCE" desc="in the areas of helping leaders to lead and members to grow and be closer to God" />
+      <item_desc status="" keyword="VISION, CORE VALUES" desc="signs of these manifested in individuals, in group life, church wide and surrounding communities." />
+      <item_desc status="" keyword="SPIRITUAL GROWTH" desc="signs (want to hear everyone's' input on this one). Note that there are outcomes proposed in the docs." />
+    </deliverable>
+  </milestone>
+
+  <milestone deadline="06/09/2019" category="Post Go-Live" status="TBD" owner="LG Team" title="Completed post go-live assessment feedback and recommendations">
+  </milestone>
+
+  <milestone deadline="06/10/2019" category="Post Go-Live" status="TBD" owner="LG Team" title="Completed post go-live assessment recommendation follow up">
+  </milestone>
+
+  <milestone deadline="02/06/2019" category="Recruit" status="TBD" owner="LG Owner" title="Recruited LG operation support">
+    <deliverable status="" keyword="TBD" desc="This has not been discussed" />
+  </milestone>
+
+  <milestone deadline="06/10/2019" category="Post Go-Live" status="look" owner="LG Team" title="Mission accomplished (LG Team) handover to LG Owner">
+    <deliverable status="" keyword="TBD" desc="This has not been discussed" />
+  </milestone>
+
+  <milestone deadline="24/11/2019" category="Evaluate" status="TBD" owner="LG Op support" title="Completed post go-live annual formal feedback">
+    <deliverable status="" keyword="TBD" desc="This has not been discussed" />
+  </milestone>
+
+  <milestone deadline="31/01/2020" category="Evaluate" status="TBD" owner="LG Op support" title="Completed post go-live annual formal feedback review and recommendations">
+    <deliverable status="" keyword="TBD" desc="This has not been discussed" />
+  </milestone>
+
+  <milestone deadline="30/11/2020" category="Evaluate" status="ON-GOING" owner="LG Op support" title="Completed post go-live annual review, recommendations and follow up">
+    <deliverable status="" keyword="TBD" desc="This has not been discussed" />
+  </milestone>
+
+</milestones>
+
+</root>

@@ -1,0 +1,196 @@
+body {
+  cursor: default;
+  margin: 10px;
+  background-color: #ccff00;
+  font-family: arial, sans-serif, helvetica, verdana;
+}
+
+mark{
+    background: yellow;
+    color: black;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  z-index: 1;
+}
+
+button {
+  border-radius: 24px;
+}
+
+.btn-group-xs > .btn, .btn-xs {
+  padding  : .25rem .4rem;
+  font-size  : .875rem;
+  line-height  : .5;
+  border-radius : .2rem;
+}
+
+hr {
+  border: 1px solid grey;
+}
+
+.zero-line-height {
+  line-height: 0pt;
+}
+
+i.fa-check {
+  color: green;
+  font-weight: bold;
+}
+
+i.fa-warning {
+  color: black;
+}
+
+i.fa-ambulance {
+  color: red;
+  font-size: 1.2em;
+}
+
+i.fa-hand-o-right {
+  font-weight: bold;
+}
+
+i.fa-star {
+  color: gold;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+i.fa-question {
+  color: red;
+  font-size: 1.2em;
+}
+
+.collapsable-icon {
+  cursor: pointer;
+}
+
+.context-menu-milestone {
+  cursor: pointer;
+}
+
+/* .milestone_status { */
+.ms_status {
+  color:grey;
+  font-size:0.85em;
+  font-weight:bold;
+  text-transform: uppercase;
+}
+
+.ms_keyword {
+  text-transform: uppercase;
+  color: blue;
+  font-weight: bold;
+  font-size: 0.85em;
+}
+
+.ms_desc :first-letter {
+  text-transform: capitalize;
+}
+
+ol.deliverable-items > li > span.ms_keyword {
+  color: #FF6347; // orange is #FF8C00;
+  font-style: italic;
+}
+
+ol {
+  list-style-position: outside; 
+  padding-left:35px; 
+  margin: 3px 0;
+}
+li {
+  margin: 0px;
+}
+
+table {
+  table-layout: fixed;
+  //word-wrap: break-word;
+  border-collapse: collapse;
+}
+table tr {
+  counter-increment: rowNumber; /* https://www.opentechguides.com/askotg/question/23/give-automatic-numbering-to-table-row-using-css */
+}
+table tr:first-of-type {
+  counter-reset: rowNumber;
+}
+table tr td:first-child::before {
+  content: counter(rowNumber);
+  min-width: 1em;
+  margin-right: 0.5em;
+}
+
+table tbody tr:hover td, .table tbody tr:hover th {
+    background-color: #9AFCFF;
+}
+
+#milestone_tbody .milestone_elements li:hover {
+    background-color: #FFF000;
+}
+
+#milestone_tbody .milestone_elements li li:hover {
+    background-color: #FFFFFF;
+}
+
+table.ms_deadline_td {
+  width:50px;
+}
+table.ms_status_td {
+  width:50px;
+}
+table.ms_owner_td {
+  width:50px;
+}
+table td:last-child {
+  width:auto;
+}
+table thead.thead-realone th {
+  vertical-align:top;
+  background-color: #FFE4B5;        
+}
+table thead.thead-btn th {
+  border: 0;
+  padding-bottom: 5px;
+}
+table th, table td {
+  border: 1px solid black;
+}
+table th, table td {
+  text-align: left;
+}
+table td {
+  vertical-align:top;
+}
+table#milestone_deadline_th {
+  width: 100px;
+}
+table tr:nth-child(odd) td{
+   background:#FCF6CF;
+}
+table tr:nth-child(even) td{
+    background:#FEFEF2;
+}
+
+/*
+What this does is that whenever the element is a drag target, 
+it’ll say that all child elements of hit can not be hit by the cursor — and as such, 
+won’t fire any drag events. This works for most modern browsers.
+*/
+.drag * {
+ pointer-events: none;
+}
+
+/**
+ * PRINTING (See https://flaviocopes.com/css-printing/ )
+ */
+@media print {
+  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    font-size: 9pt !important;
+  }
+  h1.entry-title {
+    font-size: 11pt !important;
+  }
+}
